@@ -1,33 +1,20 @@
-import { useState, useEffect } from 'react'
+import { Component } from 'react'
 import NewsItem from './NewsItem'
-// 뉴스 데이터 가져오기
-import data from '../news.json'
+// 스타일 추가
+import '../styles/style.css'
+import newsAppStyle from '../styles/NewsApp.module.css'
 
-const NewsApp = function (props) {
-    const [articles, setArticles] = useState([])
-    // 로딩 상태 조정
-    const [loading, setLoading] = useState(false)
-    useEffect(() => {
-        setLoading(true)
-        // 원래는 fetch 함수 써서 API에 요청 보내야 하지만 여기서는 적당히 흉내만 내기
-        new Promise((resolve, reject) => {
-            setTimeout(() => {
-                console.log(data.articles)
-                setArticles(data.articles)
-                setLoading(false)
-            }, 3000)
-        })
-    }, [])
+const NewsApp = function(props) {
 
-    if (loading) return <h1>뉴스 기사를 불러오는 중입니다.</h1>
+    // ...
 
     return (
-        <div id="news-app">
+        <div className={`${newsAppStyle.news_app}`}>
             {
                 articles.length === 0
                     ? <h1>표시할 뉴스가 없습니다.</h1>
                     :
-                    <ul>
+                    <ul className={`${newsAppStyle.news_app_list}`}>
                         {
                             articles.map((article, idx) => {
                                 return (<li key={idx}>

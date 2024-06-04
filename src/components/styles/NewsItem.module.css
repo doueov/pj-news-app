@@ -1,0 +1,19 @@
+.title {
+    font-family: serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*
+모듈의 경우 다음과 같이 사용 불가 (그냥 클래스 이름 부여)
+.title a {
+}
+*/
+.title-link {
+    text-decoration: none;
+}
+
+/* hello로 id를 주었지만 객체의 속성 hello로 대체 (따라서, id를 굳이 쓸 필요가 없음) */
+#hello {
+    color:red;
+}

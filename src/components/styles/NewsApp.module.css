@@ -1,0 +1,10 @@
+.news_app {
+    margin: 0 auto;
+    width: 50%;
+    border: 1px solid black;
+    background: white;
+}
+
+.news_app_list {
+    list-style-type: none;
+}
