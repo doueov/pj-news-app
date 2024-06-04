@@ -15,7 +15,7 @@ const NewsApp = function (props) {
 
     // API로 요청 보내는 코드 추가
     useEffect(() => {
-        fetch("http://localhost:4000/api/users")
+        fetch("/api/users")
             .then(res => res.json())
             .then(json => {
                 console.log(json)
