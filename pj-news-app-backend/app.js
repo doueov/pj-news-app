@@ -8,10 +8,10 @@ const port = 4000
 app.use(express.static(path.join(__dirname, '/build')));
 
 // 그 외 요청은 모두 리액트에서 빌드한 폴더의 index.html 보내기
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/build/index.html'));
+app.get("/api/users", (req, res) => {
+    res.json([{ name: "John", age: 20 }, { name: "Sally", age: 30 }]);
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/build/index.html'));
 });
