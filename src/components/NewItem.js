@@ -15,7 +15,7 @@ const NewsItem = function(props) {
     return (
         <div>
             <h1 className={newsItemStyle.title}><a className={newsItemStyle.titleLink} href={url} target='_blank'>{title}</a></h1>
-            <CircledImage src={urlToImage} />
+            <CircledImage src={urlToImage} />ㅇ
             <p>{description}</p>
         </div>
     )
